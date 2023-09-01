@@ -87,7 +87,6 @@ extension ResultsViewController {
     }
     
     private func updateResult() {
-        
         var frequencyOfAnimals: [Animal: Int] = [:]
         let animals = answers.map { $0.animal }
         

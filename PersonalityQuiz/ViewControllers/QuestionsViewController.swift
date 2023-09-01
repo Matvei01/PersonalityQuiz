@@ -46,6 +46,7 @@ class QuestionsViewController: UIViewController {
     private lazy var questionProgressView: UIProgressView = {
         let progressView = UIProgressView()
         progressView.progress = 0.5
+        
         return progressView
     }()
     
@@ -168,6 +169,7 @@ extension QuestionsViewController {
         
         if questionIndex < questions.count {
             updateUI()
+            
             return
         }
         
@@ -189,7 +191,6 @@ extension QuestionsViewController {
         
         rangedLabels.first?.text = answers.first?.title
         rangedLabels.last?.text = answers.last?.title
-        
     }
     
     private func createVerticalStackView(alignment: UIStackView.Alignment,
@@ -280,7 +281,6 @@ extension QuestionsViewController {
                 let label = UILabel()
                 label.text = "multipleLabel1"
                 label.font = UIFont.systemFont(ofSize: 17)
-                
                 label.tag = index
                 
                 return label
@@ -291,7 +291,6 @@ extension QuestionsViewController {
             let multipleSwitch: UISwitch = {
                 let multipleSwitch = UISwitch()
                 multipleSwitch.setOn(true, animated: true)
-                
                 multipleSwitch.tag = index
                 
                 return multipleSwitch
@@ -305,7 +304,6 @@ extension QuestionsViewController {
                 stackView.alignment = .fill
                 stackView.distribution = .fill
                 stackView.spacing = 0
-                
                 stackView.tag = index
                 
                 return stackView
